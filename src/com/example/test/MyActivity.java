@@ -23,6 +23,7 @@ public class MyActivity extends Activity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
+        this.setTitle("d");
         findViews();
         setListeners();
         /*Listen for button clicks*/

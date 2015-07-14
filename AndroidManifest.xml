@@ -1,13 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--整个文件的语句，都在mainfest这个标签中包含-->
+<!--package标明应用程序的入口点的命名空间/路径-->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           package="com.example.test"
           android:versionCode="1"
           android:versionName="1.0">
     <uses-sdk android:minSdkVersion="16"/>
+    <!--application 程序名 图标-->
     <application android:label="@string/app_name" android:icon="@drawable/ic_launcher">
-        <activity android:name="MyActivity"
-                  android:label="@string/app_name">
+        <activity android:name=".MyActivity"
+                  android:label="@string/app_name"><!--name表示activity类名;label表示activity在界面上显示的名称-->
             <intent-filter>
+                <!--aintent-filter设置这个activity属性
+                action 设置activity是一个程序的入口点
+                category 设置程序是否显示在启动器的应用程序列表中-->
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
