@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">test</string>
+    <string name="welcomeText">Hello! I\'m a droid.</string>
+    <string name="one_text">one_text11</string>
+    <string name="advice_light">too light</string>
+    <string name="advice_heavy">too heavy</string>
+    <string name="advice_average">good hold</string>
+    <string name="bmi_result">Your BMI is</string>
+    <string name="about_title">关于 Android BMI</string>
+    <string name="about_msg">Android BMI Calc</string>
+    <string name="ok">确认</string>
+    <string name="message">打错了吧，只能输入数字哦</string>
+    <string name="homepage_label">首页</string>
+    <string name="homepage_url">http:www.baidu.com</string>
+
+</resources>
