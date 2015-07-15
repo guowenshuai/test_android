@@ -8,6 +8,7 @@ import android.graphics.drawable.AnimationDrawable;
 import android.net.Uri;
 import android.os.Bundle;
 import android.text.AndroidCharacter;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -20,13 +21,52 @@ public class MyActivity extends Activity {
     /**
      * Called when the activity is first created.
      */
+    private static final String TAG = "BMI";
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
         this.setTitle("d");
+        Log.v(TAG, "onCreate");
+
         findViews();
         setListeners();
         /*Listen for button clicks*/
+    }
+
+    @Override
+    public void onRestart() {
+        super.onRestart();
+        Log.v(TAG, "onRestart");
+    }
+
+    @Override
+    public void onStart() {
+        super.onStart();
+        Log.v(TAG, "onStart");
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        Log.v(TAG, "onResume");
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        Log.v(TAG, "onPause");
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        Log.v(TAG, "onStop");
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        Log.v(TAG, "onDestroy");
     }
 
     private Button button_calc;
