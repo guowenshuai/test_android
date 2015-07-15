@@ -128,7 +128,7 @@ public class MyActivity extends Activity {
                             Intent intent = new Intent(Intent.ACTION_VIEW, uri);
                             startActivity(intent);
                         } catch (Exception e) {
-
+                            System.out.println("error");
                         }
                     }
                 })
