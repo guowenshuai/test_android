@@ -51,8 +51,18 @@ public class MyActivity extends Activity {
     private Button.OnClickListener calc = new Button.OnClickListener() {
         @Override
         public void onClick(View view) {
+            /*Switch to report page*/
+            Intent intent = new Intent();
+            intent.setClass(MyActivity.this, Report.class);
+            Bundle bundle = new Bundle();
+            bundle.putString("KEY_HEIGHT",field_height.getText().toString());
+            bundle.putString("KEY_WEIGHT",field_weight.getText().toString());
+            intent.putExtras(bundle);
+            startActivity(intent);
 
-            show_Toast message = new show_Toast();
+
+            /*计算BMI值*/
+/*            show_Toast message = new show_Toast();
             try {
                 DecimalFormat nf = new DecimalFormat("0.00");
                 field_height = (EditText) findViewById(R.id.height);
@@ -72,7 +82,7 @@ public class MyActivity extends Activity {
                 } else view_suggest.setText(R.string.advice_average);
             } catch (Exception obj) {
                 message.msg_error();
-            }
+            }*/
         }
     };
 
